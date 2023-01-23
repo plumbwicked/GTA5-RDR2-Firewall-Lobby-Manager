@@ -1,2 +1,5 @@
 # GTA5-Loner-Lobby-
-Solo lobby for GTA5
+Windows Firewall Rule for GTA5 Online Solo lobby 
+
+Credits : **NewbieH4X**
+Updated by plumbwicked 
