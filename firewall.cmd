@@ -1,5 +1,5 @@
-::GTA:Online Firewall Manager
-::Updated by plumbwicked
+::GTA5/RDR2 Firewall Lobby Manager
+::Based on NewbieH4X GTA:Online Firewall Manager
 @ECHO OFF
 :: Setting DOS Character Code Page to English
 chcp 437 >nul
@@ -8,9 +8,9 @@ chcp 437 >nul
 color 0A
 
 :: Setting DOS Windows Title
-set "TK_TITLE= GTA:Online Firewall Manager"
-set "TK_VERSION=1.0"
-title NewbieH4X GTA:Online Firewall Manager v%TK_VERSION%
+set "TK_TITLE= GTA5/RDR2 Firewall Lobby Manager"
+set "TK_VERSION=2.0"
+title GTA5/RDR2 Online Lobby Manager v%TK_VERSION%
 :: Setting DOS Window and Screen Buffer Size to 80 x 25
 reg add "HKCU\Console\%%SystemRoot%%_system32_cmd.exe" /v "ScreenBufferSize" /t REG_DWORD /d "0x23290050" /f >nul
 reg add "HKCU\Console\%%SystemRoot%%_system32_cmd.exe" /v "WindowSize" /t REG_DWORD /d "0x190050" /f >nul
@@ -24,7 +24,7 @@ setlocal EnableExtensions
 setlocal EnableDelayedExpansion
 
 :menu
-echo GTA:Online Firewall Manager Options:
+echo GTA5/RDR2 Firewall Lobby Manager Options:
 echo ------------------------------------
 echo.
 echo 1) Add rule
@@ -44,7 +44,7 @@ if errorlevel 1 goto :AddRule
 
 :AddRule
 echo.
-Netsh AdvFirewall Firewall add rule name="Block GTA ONLINE player ports" dir=out action=block description="Block GTA ONLINE player ports" profile=any localport=6672 remoteport=any protocol=UDP
+Netsh AdvFirewall Firewall add rule name="Block ONLINE player ports" dir=out action=block description="Block ONLINE player ports" profile=any localport=6672 remoteport=any protocol=UDP
 ::echo Rule Added.
 echo Press any key to go back...
 pause>nul
@@ -53,7 +53,7 @@ goto :menu
 
 :ShowRule
 cls
-Netsh AdvFirewall firewall show rule name="Block GTA ONLINE player ports"
+Netsh AdvFirewall firewall show rule name="Block ONLINE player ports"
 echo.
 echo Press any key to go back...
 pause>nul
@@ -62,7 +62,7 @@ goto :menu
 
 :EnableRule
 echo.
-Netsh AdvFirewall Firewall set rule name="Block GTA ONLINE player ports" new enable=yes
+Netsh AdvFirewall Firewall set rule name="Block ONLINE player ports" new enable=yes
 ::echo Rule enabled.
 echo Press any key to go back...
 pause>nul
@@ -71,7 +71,7 @@ goto :menu
 
 :DisableRule
 echo.
-Netsh AdvFirewall Firewall set rule name="Block GTA ONLINE player ports" new enable=no
+Netsh AdvFirewall Firewall set rule name="Block ONLINE player ports" new enable=no
 ::echo Rule disabled.
 echo Press any key to go back...
 pause>nul
@@ -80,7 +80,7 @@ goto :menu
 
 :RemoveRule
 echo.
-Netsh AdvFirewall Firewall delete rule name="Block GTA ONLINE player ports"
+Netsh AdvFirewall Firewall delete rule name="Block ONLINE player ports"
 ::echo Rule deleted.
 echo Press any key to go back...
 pause>nul
