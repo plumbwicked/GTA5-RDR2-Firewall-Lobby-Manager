@@ -5,5 +5,14 @@
 
 Windows Firewall Rule for GTA5/RDR2 Online Solo lobby 
 
+How to Use : 
+
+1. Download Zip 
+2. Unzip anywhere
+3. Run firewall.cmd 
+4. Follow Steps 
+5. Join new lobby after Enable/Disable rules .
+
+
 Credits : **NewbieH4X**
 Updated by plumbwicked 
